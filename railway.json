@@ -1,6 +1,8 @@
 {
-    "$schema": "https://backboard.railway.app/railway.schema.json",
-    "build": {
-        "builder": "RAILPACK"
-    }
+  "$schema": "https://backboard.railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install",
+    "startCommand": "npm run start"
+  }
 }
