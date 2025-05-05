@@ -1,10 +1,15 @@
 module.exports = ({ env }) => ({
+  connection: {
+    client: 'postgres',
     connection: {
-        client: 'postgres',
-        connection: {
-            connectionString: env('DATABASE_URL')
-        },
-        debug: true,
-        pool: { min: 0, max: 7 },
-    }
+      host: env('DATABASE_HOST', 'localhost'),
+      port: env.int('DATABASE_PORT', 5432),
+      database: env('DATABASE_NAME', 'strapi'),
+      user: env('DATABASE_USERNAME', 'strapi'),
+      password: env('DATABASE_PASSWORD', 'password'),
+      ssl: {
+        rejectUnauthorized: false, // Importante per Railway
+      },
+    },
+  },
 });
