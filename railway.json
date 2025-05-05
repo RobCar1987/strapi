@@ -2,7 +2,7 @@
   "$schema": "https://backboard.railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "npm install",
+    "buildCommand": "npm install && npm run build",
     "startCommand": "npm run start"
   }
 }
